@@ -1,15 +1,38 @@
 {
   "index": "Introduction",
   "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
+  "advanced": "Advanced",
   "about": {
     "title": "About",
-    "type": "page"
+    "type": "page",
+    "theme": {
+      "typesetting": "article"
+    }
   },
   "contact": {
     "title": "Contact ↗",
     "type": "page",
-    "href": "https://twitter.com/shuding_",
+    "href": "https://x.com/hayashi_pool",
     "newWindow": true
+  },
+  "-- More": {
+    "type": "separator",
+    "title": "More"
+  },
+  "about-link": {
+    "title": "About Nextra",
+    "href": "/about"
+  },
+  "next.js-link": {
+    "title": "Next.js Docs ↗",
+    "href": "https://nextjs.org?utm_source=nextra.site&utm_medium=referral&utm_campaign=sidebar",
+    "newWindow": true
+  },
+  "404": {
+    "type": "page",
+    "theme": {
+      "timestamp": false,
+      "typesetting": "article"
+    }
   }
 }
