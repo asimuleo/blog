@@ -1,0 +1,172 @@
+# 마크다운 신기한 기능 모음
+
+MDX 에서 가능한 재밌는 기능들을 모아보았습니다.
+
+## 콜아웃
+
+import { Callout, FileTree } from 'nextra/components'
+
+<Callout>
+    Read more about Nextra's `_meta.json` files [here](/docs/guide/organize-files).
+</Callout>
+
+```mdx filename="복사해서 사용하세요!"
+import { Callout } from 'nextra/components'
+<Callout>
+    Read more about Nextra's `_meta.json` files [here](/docs/guide/organize-files).
+</Callout>
+```
+
+
+## 파일트리
+<div className="flex flex-wrap justify-between">
+    <div className="">
+        <FileTree>
+            <FileTree.Folder name="pages" defaultOpen>
+                <FileTree.Folder name="fruits" defaultOpen>
+                    <FileTree.File name="_meta.json" />
+                    <FileTree.File name="apple.mdx" />
+                    <FileTree.File name="banana.mdx" />
+                </FileTree.Folder>
+                <FileTree.File name="_meta.json" />
+                <FileTree.File name="about.mdx" />
+                <FileTree.File name="contact.mdx" />
+                <FileTree.File name="index.mdx" />
+            </FileTree.Folder>
+        </FileTree>
+    </div>
+    <div className="nx-overflow-x-auto nx-mt-6">
+        ```mdx filename="복사해서 사용하세요!"
+        <FileTree>
+            <FileTree.Folder name="pages" defaultOpen>
+                <FileTree.Folder name="fruits" defaultOpen>
+                    <FileTree.File name="_meta.json" />
+                    <FileTree.File name="apple.mdx" />
+                    <FileTree.File name="banana.mdx" />
+                </FileTree.Folder>
+                <FileTree.File name="_meta.json" />
+                <FileTree.File name="about.mdx" />
+                <FileTree.File name="contact.mdx" />
+                <FileTree.File name="index.mdx" />
+            </FileTree.Folder>
+        </FileTree>
+        ```
+    </div>
+</div>
+
+
+
+
+## 코드
+### 인라인
+`code`
+```mdx filename="복사해서 사용하세요!"
+`code`
+```
+### 아웃라인
+<div className="flex flex-wrap justify-between nx-mt-6">
+    <div>
+        ```json filename="_meta.json" {2}
+        {
+            "index": "My Homepage",
+            "contact": "Contact Us",
+            "about": "About Us"
+        }
+        ```
+    </div>
+    <div className="nx-overflow-x-auto">
+        ```mdx filename="복사해서 사용하세요!"
+        ```json filename="_meta.json" {2}
+        {
+            "index": "My Homepage",
+            "contact": "Contact Us",
+            "about": "About Us"
+        }
+        ```
+    </div>
+</div>
+
+## h2 제목
+<div>`## h2 제목`</div>
+
+### h3 제목
+<div>`### h3 제목`</div>
+
+#### h4 제목
+<div>`#### h4 제목`</div>
+
+##### h5 제목
+<div>`##### h5 제목`</div>
+
+###### h6 제목
+<div>`###### h6 제목`</div>
+
+## 문장 강조
+**This is bold text** _This is italic text_ ~~Strikethrough~~
+
+`**This is bold text**`
+
+`_This is italic text_`
+
+`~~Strikethrough~~`
+
+
+## 인용
+> Develop. Preview. Ship. – Vercel
+
+`> Develop. Preview. Ship. – Vercel`
+
+## 목록
+### 글머리 기호 (Unordered)
+- Lorem ipsum dolor sit amet
+- Consectetur adipiscing elit
+- Integer molestie lorem at massa
+### 번호 매기기 (Ordered)
+1. Lorem ipsum dolor sit amet
+2. Consectetur adipiscing elit
+3. Integer molestie lorem at massa
+
+## 표
+| **Option** | **Description**                                                                                                             |
+| ---------- | --------------------------------------------------------------------------------------------------------------------------- |
+| First      | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |
+| Second     | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |
+| Third      | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |
+
+```mdx filename="복사해서 사용하세요!"
+| **Option** | **Description**                                                                                                             |
+| ---------- | --------------------------------------------------------------------------------------------------------------------------- |
+| First      | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |
+| Second     | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |
+| Third      | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |
+```
+
+## 링크
+[Next.js](https://nextjs.org) [Vercel](http://vercel.com) [Nextra](https://nextra.vercel.app/)
+
+```mdx filename="복사해서 사용하세요!"
+[Next.js](https://nextjs.org) [Vercel](http://vercel.com) [Nextra](https://nextra.vercel.app/)
+```
+
+<div className="mt-4 text-center text-sm">
+    [Live example on StackBlitz ↗](https://stackblitz.com/edit/nextra-2-docs-eszspq?file=pages%2F_meta.json)
+</div>
+
+```mdx filename="복사해서 사용하세요!"
+<div className="mt-4 text-center text-sm">
+    [Live example on StackBlitz ↗](https://stackblitz.com/edit/nextra-2-docs-eszspq?file=pages%2F_meta.json)
+</div>
+```
+
+## 주석
+- Footnote [^1].
+- Footnote [^2].
+[^1]: Footnote can have markup and multiple paragraphs.
+[^2]: Footnote text.
+
+```mdx filename="복사해서 사용하세요! 주석은 맨 아래로 이동합니다."
+- Footnote [^1].
+- Footnote [^2].
+[^1]: Footnote can have markup and multiple paragraphs.
+[^2]: Footnote text.
+```

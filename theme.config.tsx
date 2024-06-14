@@ -83,11 +83,14 @@ const config: DocsThemeConfig = {
         link: 'https://github.com/asimuleo',
     },
     editLink: {
-        text: 'Edit this page on GitHub →',
+        text: '같이 이 페이지를 편집! (Edit) →',
     },
     feedback: {
-        content: 'Question? Give us feedback →',
+        content: '이게 이상해요! (Issues) →',
         labels: 'feedback'
+    },
+    search: {
+        placeholder: "Search pool..."
     },
     sidebar: {
         titleComponent({ title, type }) {
@@ -127,7 +130,8 @@ const config: DocsThemeConfig = {
         )
     },
     toc: {
-        backToTop: true
+        backToTop: true,
+        title: "목차",
     }
 }
 

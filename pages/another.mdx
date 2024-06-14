@@ -1,12 +1,6 @@
-# Another Page
+# MDX 는 리액트가 가능하다!
 
-```js filename="demo.js" {3} copy
-let a = 1;
-
-console.log(a);
-```
-
-## Component
+## 내부 컴포넌트 사용하기
 
 import { useState } from 'react'
 
@@ -24,8 +18,33 @@ export const Counter = () => {
 
 <Counter/>
 
-## External Component
+
+```mdx
+import { useState } from 'react'
+
+{/* Import CSS modules */}
+import styles from '../components/counters.module.css'
+
+export const Counter = () => {
+  const [count, setCount] = useState(0);
+  return (
+    <div>
+      <button onClick={() => setCount(count + 1)} className={styles.counter}>Clicked {count} times</button>
+    </div>
+  );
+};
+
+<Counter/>
+```
+
+
+## 외부 컴포넌트 불러오기
 
 import Counters from '../components/counters'
 
 <Counters />
+
+```mdx
+import Counters from '../components/counters'
+<Counters />
+```
