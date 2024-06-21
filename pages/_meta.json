@@ -12,16 +12,19 @@
     "href": "https://x.com/hayashi_pool",
     "newWindow": true
   },
-
-  "index": "소개하기",
-  "algorithm": "알고리즘",
-  "markdown": "마크다운",
-
-  "-- More": {
-    "type": "separator",
-    "title": "More"
+  "index": {
+    "title": "소개하기"
   },
-
+  "algorithm": {
+    "title": "알고리즘"
+  },
+  "markdown": {
+    "title": "마크다운"
+  },
+  "-- More": {
+    "title": "More",
+    "type": "separator"
+  },
   "about-link": {
     "title": "About Nextra",
     "href": "https://nextra.site"
@@ -31,7 +34,9 @@
     "href": "https://nextjs.org?utm_source=nextra.site&utm_medium=referral&utm_campaign=sidebar",
     "newWindow": true
   },
-  "another": "MDX 는 리액트 가능!",
+  "another": {
+    "title": "MDX 는 리액트 가능!"
+  },
   "404": {
     "type": "page",
     "theme": {
@@ -39,5 +44,4 @@
       "typesetting": "article"
     }
   }
-
 }

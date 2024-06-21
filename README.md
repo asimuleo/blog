@@ -1,23 +1,23 @@
 
-# Nextra Docs Template 
+# Hayashi Blog
 
-This is a template for creating documentation with [Nextra](https://nextra.site).
+This is a blog created with [Nextra](https://nextra.site).
 
-[**Live Demo →**](https://nextra-docs-template.vercel.app)
+[**Live Demo →**](https://hayashi-pool.vercel.app/)
 
-[![](.github/screenshot.png)](https://nextra-docs-template.vercel.app)
-
-## Quick Start
-
-Click the button to clone this repository and deploy it on Vercel:
-
-[![](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2Fshuding%2Fnextra-docs-template&showOptionalTeamCreation=false)
+[![](.github/screenshot.png)](https://hayashi-pool.vercel.app/)
 
 ## Local Development
 
-First, run `pnpm i` to install the dependencies.
+1. 노드 설치 https://nodejs.org/
+2. pnpm 설치 https://pnpm.io/ko/installation
+3. run `pnpm i` to install the dependencies.
+4.  run `pnpm dev` to start the development server and visit localhost:3000.
 
-Then, run `pnpm dev` to start the development server and visit localhost:3000.
+## 개발 참고 문서
+1. https://nextra.site/docs/docs-theme
+2. https://mdxjs.com/docs/
+3. https://nextjs.org/docs
 
 ## License
 

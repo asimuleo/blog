@@ -1,3 +1,5 @@
 {
-  "swea": "SW Expert Academy"
+  "swea": {
+    "title": "SW Expert Academy"
+  }
 }
