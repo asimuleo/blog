@@ -1,4 +1,5 @@
 import React from 'react'
+import Script from 'next/script'
 import {DocsThemeConfig} from 'nextra-theme-docs'
 import {useConfig} from 'nextra-theme-docs'
 import {useRouter} from 'next/router'
@@ -22,7 +23,7 @@ const logo = (
 
 const config: DocsThemeConfig = {
     useNextSeoProps() {
-        const { asPath } = useRouter()
+        const {asPath} = useRouter()
         if (asPath !== '/') {
             return {
                 titleTemplate: '%s – Hayashi'
@@ -38,6 +39,15 @@ const config: DocsThemeConfig = {
                 : process.env.HOST + `/api/og?title=${title}`
         return (
             <>
+                <Script src="https://www.googletagmanager.com/gtag/js?id=G-5N79XNG4P3" strategy="beforeInteractive"/>
+                <Script strategy="lazyOnload">
+                    {
+                        `window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments)}
+            gtag('js', new Date());
+            gtag('config', 'G-5N79XNG4P3');`
+                    }
+                </Script>
                 <meta name="msapplication-TileColor" content="#fff"/>
                 <meta name="theme-color" content="#fff"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -93,7 +103,7 @@ const config: DocsThemeConfig = {
         placeholder: "Search pool..."
     },
     sidebar: {
-        titleComponent({ title, type }) {
+        titleComponent({title, type}) {
             if (type === 'separator') {
                 return <span className="cursor-default">{title}</span>
             }
