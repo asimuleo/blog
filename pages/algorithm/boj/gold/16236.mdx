@@ -1,0 +1,49 @@
+import {Green, Purple} from "../../../../components/ColorText";
+import {Yellow, RED} from "../../../../components/BackgroundText";
+
+# 16236. 아기 상어
+
+[백준, 골드, c++]
+
+이름이 엄청 귀여운 문제다. 아기 상어의 귀여운 모습이 자꾸 생각나서 집중이 잘 안된다.<br/>
+아기 상어의 크기에 따라 먹을 수 있는 물고기도 달라지고, 커지는 시기도 달리지기 떄문에<br/>
+변수를 잘 선언해 두는게 중요한 것 같다.
+
+```c++
+int move_time = 0; // 시간
+
+int baby_shark_size = 2; // 아기 상어 크기
+int baby_shark_eaten_cnt = 0; // 얼마나 먹었게?
+int baby_shark_y; // 상어 위치
+int baby_shark_x; // 상어 위치
+```
+
+[전체 소스 코드](https://www.acmicpc.net/source/81239868)
+
+
+## 전체 로직 흐름
+
+### 1. 먹울 수 있는 가장 가까운 물고기들 구하기
+<Purple>bfs</Purple> 로 최단 거리인 물고기를 찾는데, 여기서 중요한 것은<br/>
+최단거리 물고기를 발견했을 때, <Green>같은 거리에 먹을 수 있는 물고기가 있다면 해당 물고기가 탐색</Green>해야 한다.
+
+
+### 2. 그 물고기 중에서 가장 위쪽 왼쪽에 있는 물고기 선택해서 먹기
+
+여기서 핵심은 `min_distance_arr` 중에서 가장 위쪽 그리고 왼쪽을 위해 <Green>커스텀 min</Green> 을 하는 것이다.
+```c++
+auto it = min_element(min_distance_arr.begin(), min_distance_arr.end(),
+                          [](pair<int, int> a, pair<int, int> b) -> bool {
+                              if (a.first == b.first) {
+                                  return a.second < b.second;
+                              }
+                              return a.first < b.first;
+                          });
+```
+
+`eat(board, *it, visited);` 으로 먹기
+
+### 3. 먹을 수 있는 물고기가 없을 때 까지 반복
+`play()` 계속 호츌
+
+## 정리

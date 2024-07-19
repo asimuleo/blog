@@ -19,6 +19,11 @@ This is a blog created with [Nextra](https://nextra.site).
 2. https://mdxjs.com/docs/
 3. https://nextjs.org/docs
 
+## 심플 아이콘
+1. https://github.com/simple-icons/simple-icons/blob/master/slugs.md
+2. https://github.com/simple-icons/simple-icons
+3. https://simpleicons.org/?q=c
+
 ## License
 
 This project is licensed under the MIT License.

@@ -1,0 +1,11 @@
+{
+  "silver": {
+    "title": "실버"
+  },
+  "gold": {
+    "title": "골드"
+  },
+  "platinum": {
+    "title": "플레티넘"
+  }
+}

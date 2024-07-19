@@ -20,10 +20,12 @@
   "dependencies": {
     "@vercel/og": "^0.6.2",
     "next": "latest",
+    "next-themes": "^0.2.1",
     "nextra": "latest",
     "nextra-theme-docs": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "simple-icons": "^13.1.0"
   },
   "devDependencies": {
     "@types/node": "18.11.10",

@@ -1,0 +1,50 @@
+import {Green, Purple} from "../../../../components/ColorText";
+import {Yellow, RED} from "../../../../components/BackgroundText";
+
+# 5373. 큐빙
+
+[백준, 플레티넘, c++]
+
+어릴적 큐브를 좋아했던 기억이 있는데, 직접 구현해보려니까 어떤 자료구조로 표현해야 될지 고민이 많았다.
+
+결론적으로는 다음과 같은 구조로 총 <Purple>27개</Purple>를 합친 큐브 모양을 생각했다.
+
+
+
+```c++
+// 큐브 조각
+struct piece {
+    char top;
+    char bottom;
+    char left;
+    char right;
+    char front;
+    char back;
+};
+
+// 큐브
+piece cube[27];
+```
+[전체 소스 코드](https://www.acmicpc.net/source/81297256)
+
+어떤 큐브 조각은 표면적으로 3가지 면만 보이고, 다른 큐브 조각은 2가지, 1가지 면을 보여준다.
+
+정중앙의 큐브 조각은 사용자에게 아에 보이지 않는다. 내 코드에서 <Yellow>cube[13] 은 쓰이지 않는다.</Yellow>
+
+## 전체 로직 흐름
+
+### 1. 큐브 초기화
+`init()` 를 통해서 큐브 조각들에 해당하는 면들을 채워준다.<br/>
+`cube[0] = {'w', ' ', 'g', ' ', 'r', ' '};`
+
+### 2. 회전
+해당하는 명령에 따라 `left_plus();` 등의 함수를 호출해준다.<br/>
+이 함수는 해당하는 큐브 조각의 값을 변경해 준다.
+
+### 3. 출력
+맨 위만 출력하면 되기 때문에, `printCubeUp();` 을 호출해주고 끝낸다.
+
+
+## 정리
+어떤 구조로 큐브를 표현하던, <Yellow>**틀리지 않게 작성한다면, 작성하는 시간이 조금 오래걸리는 구현 문제**</Yellow>이다.<br/>
+나는 총 4시간 걸렸다. 중간중간 버그가 많았는데 print 함수를 U,D,R,L,F,B 모두 만들어서 검증 후 수정했다.

@@ -26,8 +26,9 @@
     "type": "separator"
   },
   "about-link": {
-    "title": "About Nextra",
-    "href": "https://nextra.site"
+    "title": "Nextra 알아보기 ↗",
+    "href": "https://nextra.site",
+    "newWindow": true
   },
   "next.js-link": {
     "title": "Next.js Docs ↗",
