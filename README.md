@@ -24,6 +24,8 @@ This is a blog created with [Nextra](https://nextra.site).
 2. https://github.com/simple-icons/simple-icons
 3. https://simpleicons.org/?q=c
 
+[nextra] The repository is shallow cloned, so the latest modified time will not be presented. Set the VERCEL_DEEP_CLONE=true environment variable to enable deep cloning.
+
 ## License
 
 This project is licensed under the MIT License.
