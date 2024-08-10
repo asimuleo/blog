@@ -12,7 +12,7 @@ import {Yellow, RED} from "../../components/BackgroundText";
 
 ## 값 만드는 방법
 
-```javascript
+```javascript copy
 const s = Symbol();
 console.log(typeof s); // symbol
 ```
@@ -20,7 +20,7 @@ console.log(typeof s); // symbol
 언뜻 보면 생성자 함수로 객체를 생성하는 것 같지만 new 연산자와 함께 호출하지 않는다.<br/>
 Symbol 함수에 선택적으로 문자열을 인수로 전달 가능한데, 이 문자열은 단순한 설명 용도이다.
 
-```javascript
+```javascript copy
 const s1 = Symbol('설명1') // s1.description
 const s2 = Symbol('설명2')
 console.log(s1 === s2); // false
@@ -35,7 +35,7 @@ console.log(s1 === s2); // false
 키와 심벌 값의 쌍들이 저장되어 있는 global symbol registry 가 있다.<br/>
 `Symbol.for` 메서드는 인수로 전달받은 문자열을 키로 사용하여 전역 심벌 레지스트리에서 해당 키와 일치하는 심벌 값을 검색한다.
 
-```javascript
+```javascript copy
 const s1 = Symbol.for('hayashi') // 인수를 키로 갖는 심벌 값 저장
 const s2 = Symbol.for('hayashi') // 이미 있기 때문에 심벌 값 반환
 console.log(s1 === s2) // true;
@@ -43,7 +43,7 @@ console.log(s1 === s2) // true;
 
 Symbol 함수를 호출하여 생성한 심벌 값은 전역 심벌 레지스트리에 등록되어 관리되지 않는다.
 
-```javascript
+```javascript copy
 const s = Symbol('doo')
 Symbol.keyFor('doo') // undefined
 ```
@@ -57,7 +57,7 @@ Symbol.keyFor('doo') // undefined
 <div className="nx-flex nx-flex-wrap nx-justify-between nx-mt-6">
     <div>
 
-        ```javascript
+        ```javascript copy
         const Direction = {
             UP: 1,
             DOWN: 2,
@@ -71,7 +71,7 @@ Symbol.keyFor('doo') // undefined
     </div>
     <div>
 
-        ```javascript
+        ```javascript copy
         const Direction = Object.freeze({
             UP: Symbol('up'),
             DOWN: Symbol('down'),
@@ -91,7 +91,7 @@ Symbol.keyFor('doo') // undefined
 ### 프로퍼티 키
 
 다른 프로터피 키와 절대 충돌하지 않는 유일무이한 키를 만든다.<br/>
-```javascript
+```javascript copy
 const obj = {
     [Symbol.for('me')]: 1
 }
@@ -103,7 +103,7 @@ obj[Symbol.for('me')]; // 1
 
 ### 표준 빌트인 객체 확장
 
-```javascript
+```javascript copy
 Array.property.sum = function () {
     return this.reduce((acc, cur) => acc + cur, 0);
 };
@@ -114,7 +114,7 @@ Array.property.sum = function () {
 일반적으로 좋지 않은데, 나중에 새롭게 도입된 메서드의 이름이 sum 일 경우에 해당 메서드를 사용자 메서드가 덮어쓰기 때문이다.<br/>
 하지만 여기서 심벌 값으로 프로퍼티 키를 생성하여, 표준 빌트인 객체를 확장한다면, 그런 문제가 없다.
 
-```javascript
+```javascript copy
 Array.property[Symbol.for('sum')] = function () {
     return this.reduce((acc, cur) => acc + cur, 0);
 };
@@ -128,7 +128,7 @@ JS 에서 기본 제공하는 심벌 값들은 Symbol 함수의 프로퍼티에 
 `Symbol.iterator` 메서드를 호출하면 이터레이터를 반환하도록 ECMAScript 사양에 규정되어 있다.<br/>
 이 규정, 이터레이션 프로토콜을 준수하면, 빌트인 이터러블이 아닌 일반 객체를 이터러블처럼 동작하도록 구현할 수 있다.
 
-```javascript
+```javascript copy
 const normalObj = {
     [Symbol.iterator]() {
         let cur = 1;

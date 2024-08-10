@@ -9,7 +9,7 @@ import {Yellow, RED} from "../../../../components/BackgroundText";
 아기 상어의 크기에 따라 먹을 수 있는 물고기도 달라지고, 커지는 시기도 달리지기 떄문에<br/>
 변수를 잘 선언해 두는게 중요한 것 같다.
 
-```c++
+```c++ copy
 int move_time = 0; // 시간
 
 int baby_shark_size = 2; // 아기 상어 크기
@@ -31,7 +31,7 @@ int baby_shark_x; // 상어 위치
 ### 2. 그 물고기 중에서 가장 위쪽 왼쪽에 있는 물고기 선택해서 먹기
 
 여기서 핵심은 `min_distance_arr` 중에서 가장 위쪽 그리고 왼쪽을 위해 <Green>커스텀 min</Green> 을 하는 것이다.
-```c++
+```c++ copy
 auto it = min_element(min_distance_arr.begin(), min_distance_arr.end(),
                           [](pair<int, int> a, pair<int, int> b) -> bool {
                               if (a.first == b.first) {

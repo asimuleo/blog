@@ -24,7 +24,16 @@ This is a blog created with [Nextra](https://nextra.site).
 2. https://github.com/simple-icons/simple-icons
 3. https://simpleicons.org/?q=c
 
-[nextra] The repository is shallow cloned, so the latest modified time will not be presented. Set the VERCEL_DEEP_CLONE=true environment variable to enable deep cloning.
+## 주의사항
+
+_meta.json 이 캐싱되어서 제대로 빌드되지 않는 버그가 있습니다.  
+빌드 로그에 다음과 같은 문구가 표기되어야지만 제대로 빌드가 됩니다.
+
+- `Skipping build cache, deployment was triggered without cache.`
+
+해결방법은 다음과 같습니다.
+
+- `Use an Environment Variable VERCEL_FORCE_NO_BUILD_CACHE with a value of 1 on your project to skip the Build cache`
 
 ## License
 
