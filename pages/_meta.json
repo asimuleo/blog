@@ -18,6 +18,9 @@
   "algorithm": {
     "title": "알고리즘"
   },
+  "js":  {
+    "title": "Modern JS"
+  },
   "markdown": {
     "title": "마크다운"
   },
