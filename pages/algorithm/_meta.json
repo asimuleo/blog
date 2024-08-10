@@ -1,11 +1,5 @@
 {
-  "swea": {
-    "title": "SW Expert Academy"
-  },
-  "apss": {
-    "title": "문제해결 전략"
-  },
-  "boj": {
-    "title": "백준"
-  }
+  "swea": "SW Expert Academy",
+  "apss": "문제해결 전략",
+  "boj": "백준"
 }

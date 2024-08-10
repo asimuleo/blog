@@ -102,16 +102,6 @@ const config: DocsThemeConfig = {
     search: {
         placeholder: "Search pool..."
     },
-    sidebar: {
-        titleComponent({title, type}) {
-            if (type === 'separator') {
-                return <span className="cursor-default">{title}</span>
-            }
-            return <>{title}</>
-        },
-        defaultMenuCollapseLevel: 1,
-        toggleButton: true
-    },
     footer: {
         text: (
             <div className="flex w-full flex-col items-center sm:items-start">
