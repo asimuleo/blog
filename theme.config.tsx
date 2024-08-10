@@ -1,3 +1,4 @@
+// @refresh reset
 import React from 'react'
 import Script from 'next/script'
 import {DocsThemeConfig} from 'nextra-theme-docs'
