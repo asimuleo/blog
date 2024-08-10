@@ -1,3 +1,6 @@
 {
-  "numbergame": "숫자게임"
+  "numbergame": {
+    "title": "숫자게임",
+    "display": "hidden"
+  }
 }

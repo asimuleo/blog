@@ -1,10 +1,7 @@
-import { useRouter } from 'next/router'
+import {useRouter} from 'next/router'
 
-export const ActiveLink = ({ children, num}) => {
+export const ActiveLink = ({children, num, title}) => {
     const router = useRouter()
-    const style = {
-        marginRight: 10
-    }
 
     const href = router.asPath + '/' + num
 
@@ -13,8 +10,11 @@ export const ActiveLink = ({ children, num}) => {
         router.push(href)
     }
     return (
-        <a href={href} onClick={handleClick} style={style}>
-            {num}↗
+        <a href={href} onClick={handleClick} className={"nx-mx-2 nx-p-1 w-max inline-block"}>
+            <div className={"nx-flex nx-flex-col nx-justify-center leading-tight"}>
+                <div className={"text-xs text-blue-500 font-thin"}>{num}</div>
+                <div className={"text-blue-500"}>{title}</div>
+            </div>
         </a>
     )
 }
