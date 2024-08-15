@@ -5,22 +5,22 @@ export default function App({Component, pageProps}) {
     const color = (() => {
         switch (process.env.NEXT_PUBLIC_CLOUD_ENV) {
             case 'development':
-                return 'yellow'
+                return 'nx-bg-yellow-50 dark:nx-bg-yellow-700/30'
             case 'staging':
-                return 'green'
+                return 'nx-bg-blue-100 dark:nx-bg-blue-900/30'
             case 'local':
-                return 'red'
+                return 'nx-bg-red-100 dark:nx-bg-red-900/30'
         }
     })();
 
     return (
         <div>
+            <Component {...pageProps} />
             {process.env.NEXT_PUBLIC_CLOUD_ENV !== 'production' ?
                 <div
-                    className={`dark:nx-bg-${color}-900/30 nx-bg-${color}-100 nx-text-center`}>{String(process.env.NEXT_PUBLIC_CLOUD_ENV).toUpperCase()}</div>
+                    className={`${color} nx-text-center nx-text-xl nx-font-bold absolute nx-top-0 nx-z-20 w-full`}>{String(process.env.NEXT_PUBLIC_CLOUD_ENV).toUpperCase()}</div>
                 : <></>
             }
-            <Component {...pageProps} />
         </div>
     )
 }
