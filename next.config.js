@@ -4,5 +4,6 @@ const withNextra = require('nextra')({
 })
 
 module.exports = withNextra({
-  output: 'standalone'
+  output: 'standalone',
+
 })
