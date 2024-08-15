@@ -1,5 +1,26 @@
 import '../style.css'
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+export default function App({Component, pageProps}) {
+
+    const color = (() => {
+        switch (process.env.NEXT_PUBLIC_CLOUD_ENV) {
+            case 'development':
+                return 'yellow'
+            case 'staging':
+                return 'green'
+            case 'local':
+                return 'red'
+        }
+    })();
+
+    return (
+        <div>
+            {process.env.NEXT_PUBLIC_CLOUD_ENV !== 'production' ?
+                <div
+                    className={`dark:nx-bg-${color}-900/30 nx-bg-${color}-100 nx-text-center`}>{String(process.env.NEXT_PUBLIC_CLOUD_ENV).toUpperCase()}</div>
+                : <></>
+            }
+            <Component {...pageProps} />
+        </div>
+    )
 }
