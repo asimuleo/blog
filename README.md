@@ -1,7 +1,6 @@
 
 # Hayashi Blog
 
-
 This is a blog created with [Nextra](https://nextra.site).
 
 [**Live Demo →**](https://hayashi-pool.vercel.app/)
