@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: ['/api/og/*', '/'],
             disallow: '/private/',
         },
-        sitemap: process.env.HOST + '/sitemap.xml',
+        sitemap: process.env.NEXT_PUBLIC_API_URL + '/sitemap.xml',
     }
 }

@@ -35,8 +35,8 @@ const config: DocsThemeConfig = {
         const {route} = useRouter()
         const socialCard =
             route === '/' || !title
-                ? process.env.HOST + `/api/og`
-                : process.env.HOST + `/api/og?title=${title}`
+                ? process.env.NEXT_PUBLIC_API_URL + `/api/og`
+                : process.env.NEXT_PUBLIC_API_URL + `/api/og?title=${title}`
         return (
             <>
                 <Script src="https://www.googletagmanager.com/gtag/js?id=G-5N79XNG4P3" strategy="beforeInteractive"/>
@@ -61,9 +61,10 @@ const config: DocsThemeConfig = {
                     content="Hayashi's Technology Blog."
                 />
                 <meta name="twitter:card" content="summary_large_image"/>
+                <meta name="twitter:site" content="@hayashi_pool"/>
+                <meta name="twitter:title" content={title}/>
+                <meta name="twitter:url" content={process.env.NEXT_PUBLIC_API_URL}/>
                 <meta name="twitter:image" content={socialCard}/>
-                <meta name="twitter:site:domain" content={process.env.HOSTNAME}/>
-                <meta name="twitter:url" content={process.env.HOST}/>
                 <meta
                     name="og:title"
                     content={title ? title + ' – Hayashi' : 'Hayashi'}
