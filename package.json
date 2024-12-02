@@ -1,7 +1,7 @@
 {
-  "name": "hayashi-pool-blog",
+  "name": "muleo-pool-blog",
   "version": "0.0.1",
-  "description": "Hayashi Pool Blog",
+  "description": "Muleo Pool Blog",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/asimuleo/blog.git"
   },
-  "author": "Hayashi <cs.javah@kakao.com>",
+  "author": "Muleo <cs.javah@kakao.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/asimuleo/blog/issues"

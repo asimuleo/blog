@@ -1,5 +1,5 @@
 
-# Hayashi Blog
+# Blog
 
 
 This is a blog created with [Nextra](https://nextra.site).
