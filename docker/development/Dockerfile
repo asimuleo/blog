@@ -1,4 +1,4 @@
-FROM node:20.16.0-alpine AS base
+FROM node:22.18.0-alpine AS base
 
 # 1. Install dependencies only when needed
 FROM base AS deps
@@ -12,7 +12,7 @@ COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* ./
 RUN \
   if [ -f yarn.lock ]; then yarn --frozen-lockfile; \
   elif [ -f package-lock.json ]; then npm ci; \
-  elif [ -f pnpm-lock.yaml ]; then corepack enable pnpm && pnpm i; \
+  elif [ -f pnpm-lock.yaml ]; then npm install -g pnpm && pnpm i; \
   else echo "Lockfile not found." && exit 1; \
   fi
 
